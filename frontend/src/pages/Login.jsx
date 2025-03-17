@@ -19,7 +19,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('https://ey-recipeproject.onrender.com/login', { email, password });
+            const response = await axios.post('https://eyrecipe-project-1.onrender.com/login', { email, password });
 
             localStorage.setItem('userToken', response.data.token); // Save token
             alert('Login successful!');

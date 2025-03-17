@@ -41,17 +41,15 @@ const Home = ({ onAddRecipe }) => {
         },
         {
             id: 3,
-            name: 'Sabudana Vada',
-            ingredients: ['1 cup sabudana',
-                '▢4 potatoes – medium-sized',
-                '▢½ cup peanuts',
-                '▢1 teaspoon cumin seeds',
-                '▢2 teaspoons lemon juice (optional)',
-                '▢1.5 teaspoon sugar',
-                '▢rock salt',
-                '▢oil as required, for deep frying'],
+            name: 'Shrikhand Recipe',
+            ingredients: ['4.5 cups Curd (yogurt)',
+                '8 to 9 tablespoons sugar (fine or superfine)',
+                '½ teaspoon cardamom powder',
+                '24 to 30 saffron strands',
+                '½ tablespoon warm milk',
+                '7 to 8 pistachios crushed'],
             time: '5 minutes',
-            image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/sabudana-vada-3-500x500.jpg'
+            image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2015/04/shrikhand-recipe-2-500x500.jpg'
         }
     ];
 
@@ -61,7 +59,7 @@ const Home = ({ onAddRecipe }) => {
                 const token = localStorage.getItem('userToken');
                 if (token) {
                     // Fetch user recipes if logged in
-                    const response = await axios.get('https://ey-recipeproject.onrender.com/recipes');
+                    const response = await axios.get('https://eyrecipe-project-1.onrender.com/recipes');
                     setRecipes(response.data.length > 0 ? response.data : defaultRecipes);
                 } else {
                     // If not logged in, show default recipes

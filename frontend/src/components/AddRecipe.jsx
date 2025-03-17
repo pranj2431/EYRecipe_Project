@@ -18,7 +18,7 @@ const RecipeApp = () => {
     useEffect(() => {
         const token = localStorage.getItem("userToken");
         if (token) {
-            axios.get("https://ey-recipeproject.onrender.com/user", { headers: { Authorization: `Bearer ${token}` } })
+            axios.get("https://eyrecipe-project-1.onrender.com/user", { headers: { Authorization: `Bearer ${token}` } })
                 .then((res) => setUsername(res.data.username))
                 .catch((err) => {
                     console.error("Error fetching user details:", err);
@@ -28,7 +28,7 @@ const RecipeApp = () => {
     }, []);
 
     useEffect(() => {
-        axios.get("https://ey-recipeproject.onrender.com/recipes")
+        axios.get("https://eyrecipe-project-1.onrender.com/recipes")
             .then((res) => setRecipes(Array.isArray(res.data) ? res.data : res.data.data))
             .catch((err) => console.error("Error fetching recipes:", err));
     }, []);
@@ -49,7 +49,7 @@ const RecipeApp = () => {
             const token = localStorage.getItem("userToken");
             if (token) {
                 try {
-                    const res = await axios.post("https://ey-recipeproject.onrender.com/addrecipes", newRecipe, { headers: { Authorization: `Bearer ${token}` } });
+                    const res = await axios.post("https://eyrecipe-project-1.onrender.com/addrecipes", newRecipe, { headers: { Authorization: `Bearer ${token}` } });
                     setRecipes((prev) => [res.data, ...prev]);
                     setSubmitted(true);
                     setTimeout(() => setSubmitted(false), 3000);

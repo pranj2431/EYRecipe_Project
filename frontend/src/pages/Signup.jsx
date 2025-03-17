@@ -17,7 +17,7 @@ const Signup = () => {
     });
 
     const [errors, setErrors] = useState({});
-    const API_URL = process.env.REACT_APP_API_URL || 'https://ey-recipeproject.onrender.com';
+    const API_URL = process.env.REACT_APP_API_URL || 'https://eyrecipe-project-1.onrender.com';
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });

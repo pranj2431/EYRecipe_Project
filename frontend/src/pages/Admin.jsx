@@ -11,7 +11,7 @@ const AdminLogin = () => {
     const [showNote, setShowNote] = useState(false); // ✅ Toggle note visibility
     const navigate = useNavigate();
 
-    const API_URL = "https://ey-recipeproject.onrender.com/login"; // Backend API
+    const API_URL = "https://eyrecipe-project-1.onrender.com/login"; // Backend API
 
     // Handle input changes
     const handleChange = (e) => {
